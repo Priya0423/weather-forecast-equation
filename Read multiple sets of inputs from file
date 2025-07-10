@@ -1,9 +1,0 @@
-def quadratic_temp(t, a, b, c):
-    return a * t**2 + b * t + c
-
-with open("coefficients.txt", "r") as file:
-    for line_num, line in enumerate(file, 1):
-        a, b, c = map(float, line.strip().split())
-        print(f"\n--- Model {line_num}: a={a}, b={b}, c={c} ---")
-        for t in range(25):
-            print(f"Time: {t}h - Temperature: {quadratic_temp(t, a, b, c):.2f}°C")
